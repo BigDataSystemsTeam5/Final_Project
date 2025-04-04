@@ -18,11 +18,14 @@ It automatically produces:
 [https://BigDataSystemsTeam5.github.io/Final_Project](https://BigDataSystemsTeam5.github.io/Final_Project)
 
 ---
+
 ## 🧭 Architecture Diagram
 
-![AutoDoc AI Architecture](docs/image.png)
+![AutoDoc AI Architecture](./image.png)
 
-*AutoDoc AI - Full Architecture (Based on Sketch)*
+*AutoDoc AI – Full Architecture (Based on Sketch)*
+
+---
 
 ## 📦 Features
 
