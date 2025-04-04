@@ -22,7 +22,7 @@ It automatically produces:
 
 ![AutoDoc AI Architecture](docs/image.png)
 
-*AutoDoc AI – Full Architecture (Based on Sketch)*
+*AutoDoc AI - Full Architecture (Based on Sketch)*
 
 ## 📦 Features
 
