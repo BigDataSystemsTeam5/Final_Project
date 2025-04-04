@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2025-04-04T14:02:47-04:00",
+  "id": "autodoc-ai-codelab",
+  "duration": 0,
+  "title": "AutoDoc AI – Codelab",
+  "summary": "AI-powered documentation generator for GitHub repos",
+  "source": "autodoc-ai-codelab.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "ai",
+    "llms",
+    "documentation"
+  ],
+  "tags": [],
+  "feedback": "https://your-feedback-form.com",
+  "url": "autodoc-ai-codelab"
+}

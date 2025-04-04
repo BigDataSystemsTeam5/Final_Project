@@ -1,0 +1,257 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>AutoDoc AI – Codelab</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="autodoc-ai-codelab"
+                  title="AutoDoc AI – Codelab"
+                  environment="web"
+                  feedback-link="https://your-feedback-form.com">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <h2 is-upgraded>Background</h2>
+<p>In most software projects, documentation is often neglected. Developers focus on shipping features, debugging, and deploying, which leaves documentation incomplete or outdated—affecting onboarding, maintenance, and collaboration.</p>
+<h2 is-upgraded>Objective</h2>
+<p>AutoDoc AI is an AI-powered solution that automates the generation of core documentation files from a GitHub repo, including <code>README.md</code>, interactive tutorials, and architecture diagrams.</p>
+<h2 is-upgraded>Solution Summary</h2>
+<p>A web-based application built with Streamlit that accepts a GitHub URL and generates:</p>
+<ul>
+<li>A README file summarizing the project</li>
+<li>An interactive Codelab tutorial (using Claat)</li>
+<li>Architecture diagram (via Mermaid or Mingrammer)</li>
+<li>Option to commit/push files to GitHub</li>
+<li>Public Codelab tutorial links</li>
+</ul>
+<p>LLMs and LangGraph agents are used for intelligent document generation.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Project Scope and Architecture" duration="0">
+        <h2 is-upgraded>Data Sources</h2>
+<ul>
+<li><strong>Unstructured</strong>: GitHub repositories (code)</li>
+<li><strong>Structured</strong>: Metadata (stored in PineconeDB, Snowflake)</li>
+</ul>
+<h2 is-upgraded>Technologies Used</h2>
+<ul>
+<li><strong>Frontend</strong>: Streamlit</li>
+<li><strong>Backend</strong>: FastAPI</li>
+<li><strong>Agents</strong>: LangGraph</li>
+<li><strong>LLM</strong>: GPT-4o mini</li>
+<li><strong>Workflow</strong>: Apache Airflow</li>
+<li><strong>Storage</strong>: AWS S3</li>
+<li><strong>CI/CD</strong>: GitHub Actions</li>
+<li><strong>Diagrams</strong>: Mermaid, Mingrammer</li>
+<li><strong>Tutorials</strong>: Google Claat</li>
+<li><strong>Databases</strong>: PineconeDB, Snowflake</li>
+</ul>
+<h2 is-upgraded>Expected Outputs</h2>
+<ul>
+<li>AI-generated <code>README.md</code></li>
+<li>Interactive Codelab links</li>
+<li>Architecture diagrams</li>
+<li>Deployed Streamlit app</li>
+<li>Unit/integration tests</li>
+<li>CI/CD-enabled GitHub repo</li>
+<li>Walkthrough video demo</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Problem Statement" duration="0">
+        <h2 is-upgraded>Key Challenges</h2>
+<ul>
+<li><strong>Time-Intensive</strong>: Developers lack time to document</li>
+<li><strong>Code Understanding</strong>: Contributors struggle with code navigation</li>
+<li><strong>Outdated Docs</strong>: Docs fall behind rapidly</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Project Advantages" duration="0">
+        <h2 is-upgraded>Efficiency</h2>
+<p>Reduces documentation effort through automation.</p>
+<h2 is-upgraded>Integration</h2>
+<p>Supports GitHub PR generation for updated docs.</p>
+<h2 is-upgraded>Adoption</h2>
+<p>Clear documentation improves onboarding and external contributions.</p>
+<h2 is-upgraded>Scalability</h2>
+<p>Reusable across many repos in an organization.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Implementation Methodology" duration="0">
+        <h2 is-upgraded>Execution Plan and Steps</h2>
+<ol type="1">
+<li><strong>Frontend Setup</strong>: Build the UI using Streamlit to accept GitHub URLs.</li>
+<li><strong>Backend API</strong>: Set up FastAPI to handle parsing requests and agent interaction.</li>
+<li><strong>Data Extraction</strong>: Use BeautifulSoup to scrape README/code info from GitHub.</li>
+<li><strong>Code Structuring</strong>: Parse and convert repo content using Gitingest.</li>
+<li><strong>Text Chunking</strong>: Apply Recursive Token Chunker to split large code files.</li>
+<li><strong>Embeddings &amp; Storage</strong>: <ul>
+<li>Use <code>all-MiniLM-L6-v2</code> to generate embeddings.</li>
+<li>Store embeddings in PineconeDB.</li>
+</ul>
+</li>
+<li><strong>LangGraph Agents + GPT-4o mini</strong>: <ul>
+<li>Use Retrieval-Augmented Generation to generate README.md, architecture summary, and tutorial steps.</li>
+</ul>
+</li>
+<li><strong>Visualization</strong>: <ul>
+<li>Generate architecture diagrams using Mermaid (via markdown) and Mingrammer (Python).</li>
+</ul>
+</li>
+<li><strong>Codelab Tutorial</strong>: <ul>
+<li>Format generated tutorial using Google Claat</li>
+<li>Host via GitHub Pages.</li>
+</ul>
+</li>
+<li><strong>CI/CD Integration</strong>:</li>
+</ol>
+<ul>
+<li>Use GitHub Actions to automatically trigger documentation generation and push to the repo.</li>
+</ul>
+<ol type="1" start="11">
+<li><strong>Cloud Deployment</strong>:</li>
+</ol>
+<ul>
+<li>Store files in AWS S3 and deploy the Streamlit app.</li>
+</ul>
+<ol type="1" start="12">
+<li><strong>Testing</strong>:</li>
+</ol>
+<ul>
+<li>Implement unit and integration tests for pipeline and LLM output accuracy.</li>
+</ul>
+<h2 is-upgraded>Workflow Pipeline</h2>
+<ol type="1">
+<li><strong>Data Extraction</strong>: BeautifulSoup to scrape GitHub repo data</li>
+<li><strong>Code Conversion</strong>: Gitingest transforms code to structured format</li>
+<li><strong>Chunking</strong>: Recursive token chunking</li>
+<li><strong>Embedding</strong>: Generate MiniLM embeddings</li>
+<li><strong>RAG</strong>: LangGraph agents send to GPT-4o mini</li>
+<li><strong>Visualization</strong>: Mermaid/Mingrammer for diagrams</li>
+<li><strong>Deployment</strong>: GitHub Actions + AWS S3</li>
+<li><strong>Tutorials</strong>: Claat + GitHub Pages</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Timeline and Milestones" duration="0">
+        <table>
+<tr><td colspan="1" rowspan="1"><p>Phase</p>
+</td><td colspan="1" rowspan="1"><p>Task</p>
+</td><td colspan="1" rowspan="1"><p>Deliverables</p>
+</td><td colspan="1" rowspan="1"><p>Timeline</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>1</p>
+</td><td colspan="1" rowspan="1"><p>Extraction + embedding</p>
+</td><td colspan="1" rowspan="1"><p>Airflow DAG + PineconeDB entries</p>
+</td><td colspan="1" rowspan="1"><p>April 5–8</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>2</p>
+</td><td colspan="1" rowspan="1"><p>Agent workflow + document generation</p>
+</td><td colspan="1" rowspan="1"><p>README, diagrams, Codelabs</p>
+</td><td colspan="1" rowspan="1"><p>April 9–12</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>3</p>
+</td><td colspan="1" rowspan="1"><p>GitHub integration + deployment</p>
+</td><td colspan="1" rowspan="1"><p>Live repo + hosted Codelab tutorial</p>
+</td><td colspan="1" rowspan="1"><p>April 13–18</p>
+</td></tr>
+</table>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Roles and Responsibilities" duration="0">
+        <ul>
+<li><strong>Asavari</strong>: Backend (FastAPI), Frontend (Streamlit), MCP Server Integration</li>
+<li><strong>Hishita</strong>: GitHub Automation (Commits/PRs)</li>
+<li><strong>Pratik</strong>: Airflow pipeline, LangGraph agent workflows</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Risks and Mitigation Strategies" duration="0">
+        <table>
+<tr><td colspan="1" rowspan="1"><p>Risk</p>
+</td><td colspan="1" rowspan="1"><p>Issue</p>
+</td><td colspan="1" rowspan="1"><p>Mitigation</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>AI Misinterpretation</p>
+</td><td colspan="1" rowspan="1"><p>LLM might misread logic</p>
+</td><td colspan="1" rowspan="1"><p>Add validation layer + human-in-loop review</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Codebase Size</p>
+</td><td colspan="1" rowspan="1"><p>LLM limits with large/complex codebases</p>
+</td><td colspan="1" rowspan="1"><p>File-wise summarization + modular prompts</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Private Repos</p>
+</td><td colspan="1" rowspan="1"><p>Privacy/security concerns</p>
+</td><td colspan="1" rowspan="1"><p>Use encrypted tokens and secured data pipelines</p>
+</td></tr>
+</table>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Expected Outcomes" duration="0">
+        <ul>
+<li>AI-generated documentation committed to GitHub</li>
+<li>Shareable Codelab tutorial hosted via GitHub Pages</li>
+<li>Visual architecture diagram</li>
+<li>CI/CD updates via GitHub Actions</li>
+<li>Fully deployed reusable app</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Conclusion" duration="0">
+        <p>AutoDoc AI revolutionizes documentation by leveraging LLMs and automation agents. Developers can:</p>
+<ul>
+<li>Instantly generate consistent <code>README.md</code> files</li>
+<li>Produce interactive tutorials with Claat</li>
+<li>Visualize architecture from code</li>
+<li>Sync documentation with GitHub workflows effortlessly</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
