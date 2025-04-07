@@ -6,22 +6,14 @@ AutoDoc AI is an intelligent documentation automation tool designed to generate 
 
 It automatically produces:
 - 📘 `README.md` summarizing your project
-- 🧭 Architecture diagrams (Mermaid & Mingrammer)
-- 🧪 Interactive tutorials via [Google Claat](https://github.com/googlecodelabs/tools)
+- 🧪 Interactive Codelab tutorials via [Google Claat](https://github.com/googlecodelabs/tools)
 - 🔁 CI/CD-ready documentation updates through GitHub Actions
-
----
-
-## 🚀 Live Tutorial
-
-🎓 **Explore the interactive Codelab**:  
-[https://BigDataSystemsTeam5.github.io/Final_Project](https://BigDataSystemsTeam5.github.io/Final_Project)
 
 ---
 
 ## 🧭 Architecture Diagram
 
-![AutoDoc AI Architecture](./image.png)
+![AutoDoc AI Architecture](./project_proposal_new/Project_Final.png)
 
 *AutoDoc AI – Full Architecture (Based on Sketch)*
 
@@ -30,17 +22,9 @@ It automatically produces:
 ## 📦 Features
 
 ✅ Automatically generates:
-- `README.md` based on code structure and purpose  
-- Architecture diagrams using Mermaid & Mingrammer  
+- README.md based on code structure and purpose  
 - Interactive Google Codelab tutorials  
 - GitHub integration for commit/push of generated files  
-
-💡 Uses:
-- **LLMs** (GPT-4o mini via LangGraph agents)
-- **Airflow** for pipeline orchestration
-- **Claat** for tutorials
-- **Streamlit + FastAPI** for user interface
-- **S3, Pinecone, Snowflake** for storage and vector retrieval
 
 ---
 
@@ -51,12 +35,9 @@ It automatically produces:
 | Frontend         | Streamlit                |
 | Backend          | FastAPI                  |
 | LLM Framework    | LangGraph + GPT-4o mini  |
-| Orchestration    | Apache Airflow           |
-| Embeddings       | all-MiniLM-L6-v2         |
-| Storage          | AWS S3, PineconeDB       |
-| DB & Analytics   | Snowflake                |
-| Docs Generation  | Google Claat, Mermaid, Mingrammer |
-| CI/CD            | GitHub Actions           |
+| Database         | Snowflake                |
+| Docs Generation  | Google Claat             |
+| Context Retrieval| MCP Servers              |
 
 ---
 
