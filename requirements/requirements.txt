@@ -1,0 +1,14 @@
+numpy
+pandas
+requests
+python-dotenv
+gitingest
+snowflake-snowpark-python
+langchain_core
+streamlit
+fastapi
+uvicorn
+langchain-openai
+langchain-deepseek
+langgraph
+#pygraphviz
