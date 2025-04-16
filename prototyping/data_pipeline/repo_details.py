@@ -1,5 +1,6 @@
 import requests
 from data_pipeline.logger_code import get_logger
+from langgraph_llm.agent_state import AgentState
 
 # Create separate loggers for each ETL process
 gitrepo_logger = get_logger("git_repo", "git_repo.log")
@@ -36,22 +37,25 @@ def get_lang_perc(owner, repo):
     
     
 
-def get_repo_latest_commit(owner, repo):
+def get_repo_latest_commit(state: AgentState):
 
     # GitHub API endpoint
-    owner = "pratikkanade"
-    repo = "SECFinancialStatementsSnowflake"
-    url = f"https://api.github.com/repos/{owner}/{repo}/commits"
+    #owner = "pratikkanade"
+    #repo = "SECFinancialStatementsSnowflake"
+    #url = f"https://api.github.com/repos/{owner}/{repo}/commits"
 
+    repo = state["repo"]
+    repo_name = repo.split("/")[-1]
+    owner_name = repo.split("/")[-2]
 
     # Fetch commits (latest first)
-    response = requests.get(url, params={"per_page": 1})
+    response = requests.get(repo, params={"per_page": 1})
 
     if response.status_code == 200:
         latest_commit = response.json()[0]["sha"]
 
-        gitrepo_logger.info(owner)
-        gitrepo_logger.info(repo)
+        gitrepo_logger.info(owner_name)
+        gitrepo_logger.info(repo_name)
         gitrepo_logger.info(f"Latest commit: {latest_commit}")
 
         return latest_commit
@@ -64,10 +68,10 @@ def get_repo_latest_commit(owner, repo):
 def affected_git_files(owner, repo, base_commit, head_commit):
 
     # Replace with your repository details and personal access token
-    owner = "pratikkanade"
-    repo = "SECFinancialStatementsSnowflake"
-    base_commit = "ae89c45b16282b9277337225db09301e24c554d8"  # Base commit SHA
-    head_commit = "9c1964cfbfd85f8ad4dd7fc0859f6c1f2b76ceb0"  # Head commit SHA
+    #owner = "pratikkanade"
+    #repo = "SECFinancialStatementsSnowflake"
+    #base_commit = "ae89c45b16282b9277337225db09301e24c554d8"  # Base commit SHA
+    #head_commit = "9c1964cfbfd85f8ad4dd7fc0859f6c1f2b76ceb0"  # Head commit SHA
 
 
     # GitHub API URL for comparing commits

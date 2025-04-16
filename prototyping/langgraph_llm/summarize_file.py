@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from agent_state import AgentState
 from langchain_deepseek.chat_models import ChatDeepSeek
 from langchain.prompts import PromptTemplate
+from logger_code import get_logger
 
 
 #llm = ChatOpenAI(
@@ -21,7 +22,11 @@ llm = ChatDeepSeek(
     api_key=os.environ["DEEPSEEK_API_KEY"]        
 )
 
+langgraph_logger = get_logger("langgraph_logger", "langgraph_logger.log")
+
 def generate_summary(state: AgentState):
+
+    langgraph_logger.info('Started generate_summary step')
 
     response_list = []
     processed_filename_list = []
@@ -50,17 +55,9 @@ def generate_summary(state: AgentState):
     response_list.append(str(response.content))
     #print(response_list)
 
-    #print("----------------------------------------------------------")
+    langgraph_logger.info('Finished generate_summary step')
 
     return {"summaries": response_list, "processed_filenames": processed_filename_list}
 
-# Summary generation node
-#def generate_summary(state: AgentState):
-#    summary = llm.invoke({
-#        "context": {state["current_filename"], 
-#                    state["current_file"]},
-#        "prompt": "Analyze this code file's purpose, key components, and dependencies:"
-#    })
-#    return {"summaries": [summary]}
 
 

@@ -1,0 +1,115 @@
+2025-04-14 12:33:41,206 - INFO - Started fetch_repo step
+2025-04-14 12:33:41,206 - INFO - Current repo name in fetch_repo is https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions
+2025-04-14 12:33:42,189 - INFO - Repo name fetched from Snowflake in fetch_repo is []
+2025-04-14 12:33:42,189 - INFO - Finished fetch_repo step
+2025-04-14 12:33:42,189 - INFO - Started repo_file_details step
+2025-04-14 12:33:42,189 - INFO - Current repo name in repo_file_details is https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions
+2025-04-14 12:33:44,806 - INFO - Finished repo_file_details step
+2025-04-14 12:33:44,806 - INFO - Started snowflake_store_repo step
+2025-04-14 12:33:44,806 - INFO - Started get_repo_latest_commit step
+2025-04-14 12:33:44,806 - INFO - Repo link in get_repo_latest_commit is https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions
+2025-04-14 12:33:44,806 - INFO - Repo name of the repo: https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions in get_repo_latest_commit: ML_project_h1b_visa_approval_predictions
+2025-04-14 12:33:44,806 - INFO - Owner name of the repo: https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions in get_repo_latest_commit: pratikkanade
+2025-04-14 12:33:45,179 - INFO - Latest commit id of the repo:ML_project_h1b_visa_approval_predictions is bc412f3dae740bc7f13100b079ae89401a84b296
+2025-04-14 12:33:45,179 - INFO - Finished get_repo_latest_commit step
+2025-04-14 12:33:46,141 - INFO - Finished snowflake_store_repo step
+2025-04-14 12:33:46,141 - INFO - Started decide_file step
+2025-04-14 12:33:46,141 - INFO - Current file name in decide_file is Notebook.ipynb
+2025-04-14 12:33:46,141 - INFO - Finished decide_file step
+2025-04-14 12:33:46,141 - INFO - Started file_content step
+2025-04-14 12:33:46,141 - INFO - Current file name in file_content is Notebook.ipynb
+2025-04-14 12:33:46,141 - INFO - Finished file_content step
+2025-04-14 12:33:46,141 - INFO - Started generate_summary step
+2025-04-14 12:35:01,418 - INFO - Finished generate_summary step
+2025-04-14 12:35:01,419 - INFO - Started snowflake_store_file step
+2025-04-14 13:02:47,072 - INFO - Started fetch_repo step
+2025-04-14 13:02:47,073 - INFO - Working repo name in fetch_repo is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-14 13:02:48,109 - INFO - Repo name fetched from Snowflake in fetch_repo is '[]'
+2025-04-14 13:02:48,109 - INFO - Finished fetch_repo step
+2025-04-14 13:02:48,109 - INFO - Started repo_file_details step
+2025-04-14 13:02:48,109 - INFO - Current repo name in repo_file_details is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-14 13:02:53,405 - INFO - Finished repo_file_details step
+2025-04-14 13:02:53,406 - INFO - Started snowflake_store_repo step
+2025-04-14 13:02:53,406 - INFO - Repo link in snowflake_store_repo is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-14 13:02:53,406 - INFO - Started get_repo_latest_commit step
+2025-04-14 13:02:53,406 - INFO - Repo link in get_repo_latest_commit is https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions
+2025-04-14 13:02:53,406 - INFO - Repo name of the repo: https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions in get_repo_latest_commit: ML_project_h1b_visa_approval_predictions
+2025-04-14 13:02:53,406 - INFO - Owner name of the repo: https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions in get_repo_latest_commit: pratikkanade
+2025-04-14 13:02:53,645 - INFO - Latest commit id of the repo:ML_project_h1b_visa_approval_predictions is bc412f3dae740bc7f13100b079ae89401a84b296
+2025-04-14 13:02:53,645 - INFO - Finished get_repo_latest_commit step
+2025-04-14 13:02:56,791 - INFO - Finished snowflake_store_repo step
+2025-04-14 13:02:56,791 - INFO - Started decide_file step
+2025-04-14 13:02:56,791 - INFO - Current file name in decide_file is Notebook.ipynb
+2025-04-14 13:02:56,791 - INFO - Finished decide_file step
+2025-04-14 13:02:56,802 - INFO - Started file_content step
+2025-04-14 13:02:56,802 - INFO - Current file name in file_content is Notebook.ipynb
+2025-04-14 13:02:56,802 - INFO - Finished file_content step
+2025-04-14 13:02:56,803 - INFO - Started generate_summary step
+2025-04-14 13:04:00,305 - INFO - Finished generate_summary step
+2025-04-14 13:04:00,305 - INFO - Started snowflake_store_file step
+2025-04-14 13:04:00,305 - INFO - Repo link in snowflake_store_file is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-14 13:04:00,712 - INFO - Repo ID fetched from REPO_INFO table in snowflake: '1'
+2025-04-14 13:04:01,716 - INFO - Finished snowflake_store_file step
+2025-04-14 13:04:01,718 - INFO - Started decide_file step
+2025-04-14 13:04:01,718 - INFO - Current file name in decide_file is visapred.py
+2025-04-14 13:04:01,718 - INFO - Finished decide_file step
+2025-04-14 13:04:01,719 - INFO - Started file_content step
+2025-04-14 13:04:01,720 - INFO - Current file name in file_content is visapred.py
+2025-04-14 13:04:01,720 - INFO - Finished file_content step
+2025-04-14 13:04:01,721 - INFO - Started generate_summary step
+2025-04-14 13:04:48,003 - INFO - Finished generate_summary step
+2025-04-14 13:04:48,003 - INFO - Started snowflake_store_file step
+2025-04-14 13:04:48,003 - INFO - Repo link in snowflake_store_file is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-14 13:04:48,110 - INFO - Repo ID fetched from REPO_INFO table in snowflake: '1'
+2025-04-14 13:04:48,683 - INFO - Finished snowflake_store_file step
+2025-04-14 13:04:48,683 - INFO - Started decide_file step
+2025-04-14 13:04:48,683 - INFO - Current file name in decide_file is None
+2025-04-14 13:04:48,683 - INFO - Finished decide_file step
+2025-04-14 13:04:48,683 - INFO - Started generate_project_overview step
+2025-04-14 13:06:01,800 - INFO - Finished generate_project_overview step
+2025-04-14 13:16:22,981 - INFO - Started fetch_repo step
+2025-04-14 13:16:22,981 - INFO - Working repo name in fetch_repo is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-14 13:16:24,764 - INFO - Repo name fetched from Snowflake in fetch_repo is 'Row(REPO_LINK='https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions')'
+2025-04-14 13:16:24,764 - INFO - Finished fetch_repo step
+2025-04-14 13:16:24,764 - INFO - Started repo_file_details step
+2025-04-14 13:16:24,764 - INFO - Current repo name in repo_file_details is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-14 13:16:28,524 - INFO - Finished repo_file_details step
+2025-04-14 13:16:28,525 - INFO - Started snowflake_store_repo step
+2025-04-14 13:16:28,525 - INFO - Repo link in snowflake_store_repo is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-14 13:16:28,525 - INFO - Started get_repo_latest_commit step
+2025-04-14 13:16:28,525 - INFO - Repo link in get_repo_latest_commit is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-14 13:16:28,773 - INFO - Latest commit id of the repo:ML_project_h1b_visa_approval_predictions is bc412f3dae740bc7f13100b079ae89401a84b296
+2025-04-14 13:16:28,773 - INFO - Finished get_repo_latest_commit step
+2025-04-14 13:16:29,555 - INFO - Finished snowflake_store_repo step
+2025-04-14 13:16:29,555 - INFO - Started decide_file step
+2025-04-14 13:16:29,555 - INFO - Current file name in decide_file is Notebook.ipynb
+2025-04-14 13:16:29,555 - INFO - Finished decide_file step
+2025-04-14 13:16:29,559 - INFO - Started file_content step
+2025-04-14 13:16:29,559 - INFO - Current file name in file_content is Notebook.ipynb
+2025-04-14 13:16:29,559 - INFO - Finished file_content step
+2025-04-14 13:16:29,560 - INFO - Started generate_summary step
+2025-04-14 13:21:30,111 - INFO - Started fetch_repo step
+2025-04-14 13:21:30,111 - INFO - Working repo name in fetch_repo is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-14 13:21:31,151 - INFO - Repo name fetched from Snowflake in fetch_repo is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-14 13:21:31,151 - INFO - Finished fetch_repo step
+2025-04-14 13:21:31,155 - INFO - Started repo_file_details step
+2025-04-14 13:21:31,156 - INFO - Current repo name in repo_file_details is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-14 13:21:33,274 - INFO - Finished repo_file_details step
+2025-04-14 13:21:33,274 - INFO - Started snowflake_store_repo step
+2025-04-14 13:21:33,274 - INFO - Repo link in snowflake_store_repo is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-14 13:21:33,274 - INFO - Started get_repo_latest_commit step
+2025-04-14 13:21:33,274 - INFO - Repo link in get_repo_latest_commit is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-14 13:21:33,495 - INFO - Latest commit id of the repo:ML_project_h1b_visa_approval_predictions is bc412f3dae740bc7f13100b079ae89401a84b296
+2025-04-14 13:21:33,495 - INFO - Finished get_repo_latest_commit step
+2025-04-14 13:21:33,902 - INFO - Finished snowflake_store_repo step
+2025-04-14 13:21:33,909 - INFO - Started decide_file step
+2025-04-14 13:21:33,909 - INFO - Current file name in decide_file is Notebook.ipynb
+2025-04-14 13:21:33,909 - INFO - Finished decide_file step
+2025-04-14 13:21:33,910 - INFO - Started file_content step
+2025-04-14 13:21:33,910 - INFO - Current file name in file_content is Notebook.ipynb
+2025-04-14 13:21:33,910 - INFO - Finished file_content step
+2025-04-14 13:21:33,915 - INFO - Started generate_summary step
+2025-04-14 13:27:56,315 - INFO - Started fetch_repo step
+2025-04-14 13:27:56,316 - INFO - Working repo name in fetch_repo is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-14 13:27:57,240 - INFO - Repo name fetched from Snowflake in fetch_repo is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-14 13:27:57,240 - INFO - Finished fetch_repo step

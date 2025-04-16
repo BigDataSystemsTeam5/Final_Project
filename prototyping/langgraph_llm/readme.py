@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from langchain_deepseek import ChatDeepSeek
 from agent_state import AgentState
 from langchain.prompts import PromptTemplate
+from logger_code import get_logger
 
 load_dotenv(r'C:\Users\Admin\Desktop\MS Data Architecture and Management\DAMG 7245 - Big Data Systems and Intelligence Analytics\Project\environment\access.env')
 
@@ -14,12 +15,12 @@ llm = ChatDeepSeek(
     api_key=os.environ["DEEPSEEK_API_KEY"]        
 )
 
+langgraph_logger = get_logger("langgraph_logger", "langgraph_logger.log")
+
 def generate_project_overview(state: AgentState):
-    #combined = "\n\n".join([
-    #    f"File: {file}\nSummary: {summary}"
-    #    for file, summary in zip(state["processed_filenames"], state["summaries"])
-    #])
-    
+
+    langgraph_logger.info('Started generate_project_overview step')
+
     prompt = PromptTemplate(template=
     """{Repo} is the project repository. {Files} is a list of file names in the project repository. {Tree} is the 
     repository structure of the entire project repository for reference.
@@ -27,7 +28,8 @@ def generate_project_overview(state: AgentState):
     for the entire project repository. Below is the structure of README file. You can include any or all 
     of the points from the below structure depending on the project files. Each section from the below structure
     should have detailed information. The information shouldn't be just one liners. The information in the 
-    sections should not be generic or vague. 
+    sections should not be generic or vague. Code snippets should be generated wherever they are absolutely
+    necessary.
 
         # Title
 
@@ -104,6 +106,8 @@ def generate_project_overview(state: AgentState):
 
     with open('output.md', 'wb') as f:
         f.write(bytes_obj)
+
+    langgraph_logger.info('Finished generate_project_overview step')
 
     #print(response.content)
 

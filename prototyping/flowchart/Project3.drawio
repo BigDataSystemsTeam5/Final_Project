@@ -1,0 +1,249 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.2">
+  <diagram name="Page-1" id="NE8YnE7grTGkw6alidMU">
+    <mxGraphModel dx="2489" dy="2140" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-1" value="Streamlit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-2" value="FastAPI" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-3" value="Snowflake DB" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-4" value="Git Ingest&lt;div&gt;file filter(.py, .sql)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-5" value="No change" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-6" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Q_mQHCiik-I9h8KyMBtv-3" target="Q_mQHCiik-I9h8KyMBtv-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="785" y="490" as="sourcePoint" />
+            <mxPoint x="835" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-7" value="Same Repo, same commit ID" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="810" y="450" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="Q_mQHCiik-I9h8KyMBtv-3" target="Q_mQHCiik-I9h8KyMBtv-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="860" y="430" as="sourcePoint" />
+            <mxPoint x="910" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-9" value="New Repo" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="900" y="370" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-10" value="LLM" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-11" value="Code to Doc&lt;div&gt;{code:doc}&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1155" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-12" value="Generate README" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="680" y="399.09" as="sourcePoint" />
+            <mxPoint x="750" y="399" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="Q_mQHCiik-I9h8KyMBtv-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="399.17999999999995" as="sourcePoint" />
+            <mxPoint x="550" y="399.09" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1140" y="400.09" as="sourcePoint" />
+            <mxPoint x="1210" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1330" y="400.09" as="sourcePoint" />
+            <mxPoint x="1400" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-17" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1229.44" y="488" as="sourcePoint" />
+            <mxPoint x="1229.44" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-19" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Q_mQHCiik-I9h8KyMBtv-12" target="Q_mQHCiik-I9h8KyMBtv-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1460" y="510" as="sourcePoint" />
+            <mxPoint x="410" y="600" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1490" y="600" />
+              <mxPoint x="450" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-20" value="Commit Approval" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="960" y="610" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-26" value="GitPython" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-31" value="Snowflake DB" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="740" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-33" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Q_mQHCiik-I9h8KyMBtv-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="508" as="sourcePoint" />
+            <mxPoint x="420" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-35" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="424" y="680" as="sourcePoint" />
+            <mxPoint x="424" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-36" value="U&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;pdate&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="420" y="698" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-37" value="GitPython" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-38" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="Q_mQHCiik-I9h8KyMBtv-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="370" as="sourcePoint" />
+            <mxPoint x="810" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-39" value="Same Repo, diff commit ID" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="810" y="300" width="170" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-40" value="User" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-41" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="Q_mQHCiik-I9h8KyMBtv-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="400" as="sourcePoint" />
+            <mxPoint x="320" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-42" value="Commit to Repo" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="310" y="540" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-49" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="Q_mQHCiik-I9h8KyMBtv-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1080" y="250" as="sourcePoint" />
+            <mxPoint x="1120" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-50" value="New files" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-51" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="Q_mQHCiik-I9h8KyMBtv-37" target="Q_mQHCiik-I9h8KyMBtv-50">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="870" y="140" as="sourcePoint" />
+            <mxPoint x="920" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-81" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="940" y="-260" width="1130" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-54" value="New Files" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="-68" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-58" value="Git Ingest&lt;div&gt;file filter (.py, .sql)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="-68" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-59" value="LLM&lt;div&gt;Is change necessary&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="-68" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-62" value="Added New Files&lt;div&gt;Modified Old Files&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1215" y="-5" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-63" value="LLM" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1700" y="-68" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-66" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1820" y="-38.620000000000005" as="sourcePoint" />
+            <mxPoint x="1900" y="-38.620000000000005" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-67" value="Generate README" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1900" y="-68" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-68" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="Q_mQHCiik-I9h8KyMBtv-58">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1140" y="-38" as="sourcePoint" />
+            <mxPoint x="1190" y="-88" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-71" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="Q_mQHCiik-I9h8KyMBtv-59">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1340" y="-38" as="sourcePoint" />
+            <mxPoint x="1390" y="-88" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-73" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Q_mQHCiik-I9h8KyMBtv-59" target="Q_mQHCiik-I9h8KyMBtv-63">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1630" y="-8" as="sourcePoint" />
+            <mxPoint x="1680" y="-58" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-74" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1610" y="-68" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-76" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="Q_mQHCiik-I9h8KyMBtv-59">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1070" y="-68" as="sourcePoint" />
+            <mxPoint x="1520" y="-148" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1070" y="-128" />
+              <mxPoint x="1520" y="-128" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-77" value="Deleted Files" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="-160" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-78" value="MCP" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1460" y="52" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-79" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="Q_mQHCiik-I9h8KyMBtv-59">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1520" y="52" as="sourcePoint" />
+            <mxPoint x="1570" y="2" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-84" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="Q_mQHCiik-I9h8KyMBtv-81">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1080" y="190" as="sourcePoint" />
+            <mxPoint x="980" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-85" value="Snowflake DB" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-86" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="Q_mQHCiik-I9h8KyMBtv-85">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1280" y="520" as="sourcePoint" />
+            <mxPoint x="1300" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q_mQHCiik-I9h8KyMBtv-88" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.599;entryY=0.009;entryDx=0;entryDy=0;exitX=0.46;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="Q_mQHCiik-I9h8KyMBtv-81" target="Q_mQHCiik-I9h8KyMBtv-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1090" y="200" as="sourcePoint" />
+            <mxPoint x="1115" y="134" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1470" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

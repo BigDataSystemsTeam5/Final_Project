@@ -1,17 +1,16 @@
 from typing import TypedDict, List, Annotated
 import operator
-from langchain_core.agents import AgentAction
-from langchain_core.messages import BaseMessage
+#from langchain_core.agents import AgentAction
+#from langchain_core.messages import BaseMessage
 #from langgraph.store.memory import InMemoryStore
 
 
 class AgentState(TypedDict):
     repo: str
     structure: str
+    snowflake_repo: str
     #chat_history: list[BaseMessage]
     #intermediate_steps: Annotated[list[tuple[AgentAction, str]], operator.add]
-    #files: Annotated[List[str], operator.add]  # Accumulates file contents
-    #summaries: Annotated[List[str], operator.add]  # Stores interim summaries
     #count: int  # Tracks number of processed files
     files: List[str]
     filenames: List[str]
