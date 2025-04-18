@@ -1,0 +1,133 @@
+import requests
+import base64
+from services.github_tracker import extract_owner_repo
+
+# Priority of extensions → to infer language and usage intent
+LANG_PRIORITY = {
+    ".py": "Python",
+    ".js": "JavaScript",
+    ".ts": "TypeScript",
+    ".java": "Java",
+    ".go": "Go",
+    ".rs": "Rust",
+    ".cpp": "C++",
+    ".c": "C",
+    ".sh": "Shell",
+    ".rb": "Ruby"
+}
+
+def fetch_file_from_github(repo_url: str, path: str, commit_id: str) -> str:
+    """Fetch the raw content of a file at a specific path and commit."""
+    owner, repo = extract_owner_repo(repo_url)
+    api_url = f"https://api.github.com/repos/{owner}/{repo}/contents/{path}?ref={commit_id}"
+    headers = {
+        "Accept": "application/vnd.github.v3.raw"
+    }
+
+    response = requests.get(api_url, headers=headers)
+    if response.status_code == 200:
+        content_json = response.json()
+        if content_json.get("encoding") == "base64":
+            return base64.b64decode(content_json["content"]).decode("utf-8")
+        return content_json.get("content", "")
+    return f" Could not fetch `{path}` from GitHub"
+
+
+def try_fetch_first_valid_file(repo_url: str, commit_id: str, candidates: list[str]) -> tuple[str, str]:
+    """Return the first file that exists from a list of candidates."""
+    for path in candidates:
+        content = fetch_file_from_github(repo_url, path, commit_id)
+        if not in content and content.strip():
+            return path, content
+    return "", ""
+
+
+def try_fetch_any_source_file(repo_url: str, commit_id: str) -> tuple[str, str, str]:
+    """Return the most relevant source file across all known extensions."""
+    owner, repo = extract_owner_repo(repo_url)
+    api_url = f"https://api.github.com/repos/{owner}/{repo}/contents?ref={commit_id}"
+    headers = {"Accept": "application/vnd.github.v3+json"}
+
+    response = requests.get(api_url, headers=headers)
+    if response.status_code != 200:
+        return "", "", ""
+
+    files = response.json()
+    candidates = []
+    for file in files:
+        name = file["name"]
+        ext = "." + name.split(".")[-1]
+        if ext in LANG_PRIORITY:
+            candidates.append((name, file.get("size", 0), ext))
+
+    candidates.sort(key=lambda x: (-x[1], list(LANG_PRIORITY.keys()).index(x[2])))
+
+    for name, _, ext in candidates:
+        content = fetch_file_from_github(repo_url, name, commit_id)
+        if not in content and content.strip():
+            return name, content, LANG_PRIORITY[ext]
+
+    return "", "", ""
+
+
+def generate_readme(repo_url: str, commit_id: str) -> str:
+    """Generates README.md based on best available source file."""
+    known_entry_points = [
+        "main.py", "app.py", "cli.py", "src/main.py",
+        "index.js", "app.js", "index.ts"
+    ]
+    entry_file, entry_code = try_fetch_first_valid_file(repo_url, commit_id, known_entry_points)
+
+    if not entry_file:
+        entry_file, entry_code, lang = try_fetch_any_source_file(repo_url, commit_id)
+    else:
+        lang = entry_file.split(".")[-1]
+
+    requirements = fetch_file_from_github(repo_url, "requirements.txt", commit_id)
+
+    return f"""# Auto-Generated README
+
+**Repository:** {repo_url}  
+**Commit:** `{commit_id}`
+
+## Overview
+This README was generated automatically using AutoDoc based on your GitHub repository.
+
+## Description
+{f"The following `{lang}` file was used to infer project functionality: `{entry_file}`" if entry_file else "No usable code files were found. This repo may be a template, config repo, or non-standard."}
+
+```{lang.lower()}
+{entry_code[:500]}...
+
+## Installation
+{f"To install dependencies:\n\n{requirements}\n" if requirements.strip() else "No requirements.txt found."}
+
+## Usage
+{f"Run the application using {entry_file} or explore other scripts in the repository." if entry_file else "Please review the repo manually to understand how to use it."}
+python {entry_file}
+
+## License
+This documentation was generated automatically. Please verify correctness and licensing as needed. """
+
+def generate_codelab(repo_url: str, commit_id: str) -> str: """Generates a Markdown-based Codelab based on repo structure and code files.""" requirements = fetch_file_from_github(repo_url, "requirements.txt", commit_id)
+known_entry_points = [
+    "main.py", "app.py", "cli.py", "src/main.py",
+    "index.js", "app.js", "index.ts"
+]
+entry_file, entry_code = try_fetch_first_valid_file(repo_url, commit_id, known_entry_points)
+
+if not entry_file:
+    entry_file, entry_code, lang = try_fetch_any_source_file(repo_url, commit_id)
+else:
+    lang = entry_file.split(".")[-1]
+
+run_block = (
+    f"Using `{entry_file}` as the entry point:\n```{lang.lower()}\n{entry_code[:500]}...\n```"
+    if entry_file else
+    " We could not detect a runnable script or entry point. Please explore the repo manually to identify how it should be used."
+)
+
+return f"""title: Getting Started with Your GitHub Project
+## Summary 
+Learn how to install and run the project from {repo_url} id: github-codelab-autogenerated categories: github, tutorial, autodoc tags: github, llm, tutorial authors: AutoDoc AI environments: Web, CLI status: Published
+
