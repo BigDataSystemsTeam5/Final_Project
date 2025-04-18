@@ -12,8 +12,7 @@ It automatically produces:
 ---
 
 ## 🧭 Architecture Diagram
-
-/Users/nikhilshejwal/Desktop/MCP_GithubServer/diagram/autodoc_ai_architecture_with_deployment.png
+![image](https://github.com/user-attachments/assets/e630cd0d-c96e-4fe0-8b86-33f34a14f72f)
 
 *AutoDoc AI – Full Architecture*
 
