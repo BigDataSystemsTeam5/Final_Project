@@ -11,6 +11,8 @@ It automatically produces:
 
 Streamlit access link: http://3.130.104.76:8501/  
 FastAPI access link: http://3.130.104.76:8000/docs
+Codelabs link: https://bigdatasystemsteam5.github.io/Final_Project/#0
+ 
 
 ---
 
