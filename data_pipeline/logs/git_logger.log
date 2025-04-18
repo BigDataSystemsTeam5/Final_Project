@@ -1,0 +1,26 @@
+2025-04-18 08:36:58,421 - INFO - Started repo_file_details step
+2025-04-18 08:37:01,082 - INFO - Finished repo_file_details step
+2025-04-18 08:37:01,092 - INFO - Started repo_file_details step
+2025-04-18 08:37:02,983 - INFO - Finished repo_file_details step
+2025-04-18 08:37:15,435 - INFO - Started repo_file_details step
+2025-04-18 08:37:15,957 - ERROR - Error during git ingestion: Repository not found, make sure it is public
+2025-04-18 08:37:15,958 - INFO - Started repo_file_details step
+2025-04-18 08:37:16,202 - ERROR - Error during git ingestion: Repository not found, make sure it is public
+2025-04-18 08:38:48,854 - INFO - Started repo_file_details step
+2025-04-18 08:38:49,353 - ERROR - Error during git ingestion: Repository not found, make sure it is public
+2025-04-18 08:39:29,675 - INFO - Started repo_file_details step
+2025-04-18 08:39:29,957 - ERROR - Error during git ingestion: Repository not found, make sure it is public
+2025-04-18 08:39:29,958 - INFO - Started repo_file_details step
+2025-04-18 08:39:30,492 - ERROR - Error during git ingestion: Repository not found, make sure it is public
+2025-04-18 08:39:48,277 - INFO - Started repo_file_details step
+2025-04-18 08:39:48,713 - ERROR - Error during git ingestion: Repository not found, make sure it is public
+2025-04-18 08:39:48,714 - INFO - Started repo_file_details step
+2025-04-18 08:39:49,129 - ERROR - Error during git ingestion: Repository not found, make sure it is public
+2025-04-18 08:40:03,925 - INFO - Started repo_file_details step
+2025-04-18 08:40:04,380 - ERROR - Error during git ingestion: Repository not found, make sure it is public
+2025-04-18 08:40:04,380 - INFO - Started repo_file_details step
+2025-04-18 08:40:04,795 - ERROR - Error during git ingestion: Repository not found, make sure it is public
+2025-04-18 09:08:10,694 - INFO - Started repo_file_details step
+2025-04-18 09:08:13,161 - INFO - Finished repo_file_details step
+2025-04-18 09:08:13,163 - INFO - Started repo_file_details step
+2025-04-18 09:08:14,359 - INFO - Finished repo_file_details step

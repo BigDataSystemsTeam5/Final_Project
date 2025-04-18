@@ -1,0 +1,172 @@
+2025-04-16 18:20:48,149 - INFO - Started repo_file_details step
+2025-04-16 18:20:48,149 - INFO - Current repo name in repo_file_details is 'https://github.com/pratikkanade/ML_project_h1'
+2025-04-16 18:20:48,627 - ERROR - Error during git ingestion: Repository not found, make sure it is public
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\MS Data Architecture and Management\DAMG 7245 - Big Data Systems and Intelligence Analytics\Project Crew AI\data_pipeline\git_ingest.py", line 25, in repo_file_details
+    summary, tree, content = ingest(repo)
+                             ^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\repository_ingest.py", line 142, in ingest
+    return asyncio.run(
+           ^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 684, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\repository_ingest.py", line 78, in ingest_async
+    await clone_coroutine
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\utils\timeout_wrapper.py", line 37, in wrapper
+    return await asyncio.wait_for(func(*args, **kwargs), timeout=seconds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\cloning.py", line 81, in clone_repo
+    raise ValueError("Repository not found, make sure it is public")
+ValueError: Repository not found, make sure it is public
+2025-04-16 18:22:00,556 - INFO - Started repo_file_details step
+2025-04-16 18:22:00,556 - INFO - Current repo name in repo_file_details is 'https://github.com/pratikkanade/ML_project_h1'
+2025-04-16 18:22:00,931 - ERROR - Error during git ingestion: Repository not found, make sure it is public
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\MS Data Architecture and Management\DAMG 7245 - Big Data Systems and Intelligence Analytics\Project Crew AI\data_pipeline\git_ingest.py", line 25, in repo_file_details
+    summary, tree, content = ingest(repo)
+                             ^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\repository_ingest.py", line 142, in ingest
+    return asyncio.run(
+           ^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 684, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\repository_ingest.py", line 78, in ingest_async
+    await clone_coroutine
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\utils\timeout_wrapper.py", line 37, in wrapper
+    return await asyncio.wait_for(func(*args, **kwargs), timeout=seconds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\cloning.py", line 81, in clone_repo
+    raise ValueError("Repository not found, make sure it is public")
+ValueError: Repository not found, make sure it is public
+2025-04-16 18:23:01,305 - INFO - Started repo_file_details step
+2025-04-16 18:23:01,305 - INFO - Current repo name in repo_file_details is 'https://github.com/pratikkanade/DBMS_roommates_and_accomodation_database_project'
+2025-04-16 18:23:05,882 - INFO - Finished repo_file_details step
+2025-04-16 18:23:19,894 - INFO - Started repo_file_details step
+2025-04-16 18:23:19,895 - INFO - Current repo name in repo_file_details is 'https://github.com/pratikkanade/'
+2025-04-16 18:23:19,896 - ERROR - Error during git ingestion: Invalid repository URL '/pratikkanade/'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\MS Data Architecture and Management\DAMG 7245 - Big Data Systems and Intelligence Analytics\Project Crew AI\data_pipeline\git_ingest.py", line 25, in repo_file_details
+    summary, tree, content = ingest(repo)
+                             ^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\repository_ingest.py", line 142, in ingest
+    return asyncio.run(
+           ^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 684, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\repository_ingest.py", line 61, in ingest_async
+    parsed_query: ParsedQuery = await parse_query(
+                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\query_parsing.py", line 110, in parse_query
+    parsed_query = await _parse_remote_repo(source)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\query_parsing.py", line 186, in _parse_remote_repo
+    user_name, repo_name = _get_user_and_repo_from_path(parsed_url.path)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\utils\query_parser_utils.py", line 118, in _get_user_and_repo_from_path
+    raise ValueError(f"Invalid repository URL '{path}'")
+ValueError: Invalid repository URL '/pratikkanade/'
+2025-04-16 18:23:49,675 - INFO - Started repo_file_details step
+2025-04-16 18:23:49,676 - INFO - Current repo name in repo_file_details is 'https://github.com/pratikkanade/'
+2025-04-16 18:23:49,676 - ERROR - No repository provided to git_ingest.
+2025-04-16 18:23:49,676 - ERROR - Error during git ingestion: Invalid repository URL '/pratikkanade/'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\MS Data Architecture and Management\DAMG 7245 - Big Data Systems and Intelligence Analytics\Project Crew AI\data_pipeline\git_ingest.py", line 25, in repo_file_details
+    summary, tree, content = ingest(repo)
+                             ^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\repository_ingest.py", line 142, in ingest
+    return asyncio.run(
+           ^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 684, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\repository_ingest.py", line 61, in ingest_async
+    parsed_query: ParsedQuery = await parse_query(
+                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\query_parsing.py", line 110, in parse_query
+    parsed_query = await _parse_remote_repo(source)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\query_parsing.py", line 186, in _parse_remote_repo
+    user_name, repo_name = _get_user_and_repo_from_path(parsed_url.path)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\utils\query_parser_utils.py", line 118, in _get_user_and_repo_from_path
+    raise ValueError(f"Invalid repository URL '{path}'")
+ValueError: Invalid repository URL '/pratikkanade/'
+2025-04-16 18:50:05,884 - INFO - Started repo_file_details step
+2025-04-16 18:50:05,884 - INFO - Current repo name in repo_file_details is 'https://github.com/pratikkanade/'
+2025-04-16 18:50:05,885 - ERROR - Error during git ingestion: Invalid repository URL '/pratikkanade/'
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\MS Data Architecture and Management\DAMG 7245 - Big Data Systems and Intelligence Analytics\Project Crew AI\data_pipeline\git_ingest.py", line 23, in repo_file_details
+    summary, tree, content = ingest(repo)
+                             ^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\repository_ingest.py", line 142, in ingest
+    return asyncio.run(
+           ^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 684, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\repository_ingest.py", line 61, in ingest_async
+    parsed_query: ParsedQuery = await parse_query(
+                                ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\query_parsing.py", line 110, in parse_query
+    parsed_query = await _parse_remote_repo(source)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\query_parsing.py", line 186, in _parse_remote_repo
+    user_name, repo_name = _get_user_and_repo_from_path(parsed_url.path)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\site-packages\gitingest\utils\query_parser_utils.py", line 118, in _get_user_and_repo_from_path
+    raise ValueError(f"Invalid repository URL '{path}'")
+ValueError: Invalid repository URL '/pratikkanade/'
+2025-04-16 18:50:39,183 - INFO - Started repo_file_details step
+2025-04-16 18:50:39,183 - INFO - Current repo name in repo_file_details is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-16 18:50:41,260 - INFO - Finished repo_file_details step
+2025-04-16 18:51:03,703 - INFO - Started repo_file_details step
+2025-04-16 18:51:03,703 - INFO - Current repo name in repo_file_details is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-16 18:51:06,357 - INFO - Finished repo_file_details step
+2025-04-16 18:51:48,836 - INFO - Started repo_file_details step
+2025-04-16 18:51:48,836 - INFO - Current repo name in repo_file_details is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-16 18:51:50,843 - INFO - Finished repo_file_details step
+2025-04-16 18:52:04,070 - INFO - Started repo_file_details step
+2025-04-16 18:52:04,070 - INFO - Current repo name in repo_file_details is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-16 18:52:06,091 - INFO - Finished repo_file_details step
+2025-04-16 19:49:13,790 - INFO - Started repo_file_details step
+2025-04-16 19:49:13,791 - INFO - Current repo name in repo_file_details is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-16 19:49:16,673 - INFO - Finished repo_file_details step

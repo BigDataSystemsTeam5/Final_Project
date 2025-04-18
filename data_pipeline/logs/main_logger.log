@@ -1,0 +1,47 @@
+2025-04-17 00:10:02,475 - INFO - Started git_ingest function
+2025-04-17 00:10:02,475 - INFO - Current repo name in git_ingest is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-17 00:10:04,258 - INFO - Finished repo_file_details function
+2025-04-17 00:10:23,300 - INFO - Started git_ingest function
+2025-04-17 00:10:23,300 - INFO - Current repo name in git_ingest is 'https://github.com/pratikkanade/ML_project_h1b_visa_approval_predictions'
+2025-04-17 00:10:24,897 - INFO - Finished repo_file_details function
+2025-04-17 02:49:16,244 - INFO - Started git_ingest function
+2025-04-17 02:49:16,244 - INFO - Current repo name in git_ingest is 'https://github.com/Asavari24/BigDataAssignment4Part1'
+2025-04-17 02:49:18,541 - INFO - Finished repo_file_details function
+2025-04-17 02:53:22,844 - INFO - Started git_ingest function
+2025-04-17 02:53:22,845 - INFO - Current repo name in git_ingest is 'https://github.com/Asavari24/BigDataAssignment4Part1'
+2025-04-17 02:53:25,068 - ERROR - Error during git ingestion: 'llm_codelab.md' is not in list
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\MS Data Architecture and Management\DAMG 7245 - Big Data Systems and Intelligence Analytics\Project Crew AI\data_pipeline\git_ingest.py", line 45, in repo_file_details
+    file_index = filenames.index(filename)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: 'llm_codelab.md' is not in list
+2025-04-17 02:54:57,175 - INFO - Started git_ingest function
+2025-04-17 02:54:57,175 - INFO - Current repo name in git_ingest is 'https://github.com/Asavari24/BigDataAssignment4Part1'
+2025-04-17 02:55:22,906 - INFO - Started git_ingest function
+2025-04-17 02:55:22,906 - INFO - Current repo name in git_ingest is 'https://github.com/Asavari24/BigDataAssignment4Part1'
+2025-04-17 02:56:04,896 - INFO - Started git_ingest function
+2025-04-17 02:56:04,896 - INFO - Current repo name in git_ingest is 'https://github.com/Asavari24/BigDataAssignment4Part1'
+2025-04-17 02:56:07,251 - INFO - Finished repo_file_details function
+2025-04-17 02:56:59,342 - INFO - Started git_ingest function
+2025-04-17 02:56:59,342 - INFO - Current repo name in git_ingest is 'https://github.com/Asavari24/BigDataAssignment4Part1'
+2025-04-17 03:00:51,052 - INFO - Started git_ingest function
+2025-04-17 03:00:51,053 - INFO - Current repo name in git_ingest is 'https://github.com/Asavari24/BigDataAssignment4Part1'
+2025-04-17 03:11:44,100 - INFO - Started git_ingest function
+2025-04-17 03:11:44,100 - INFO - Current repo name in git_ingest is 'https://github.com/Asavari24/BigDataAssignment4Part1'
+2025-04-17 03:11:45,967 - INFO - Finished repo_file_details function
+2025-04-17 03:13:00,207 - INFO - Started git_ingest function
+2025-04-17 03:13:00,207 - INFO - Current repo name in git_ingest is 'https://github.com/Asavari24/BigDataAssignment4Part1'
+2025-04-17 03:13:02,559 - INFO - Finished repo_file_details function
+2025-04-17 03:14:58,312 - INFO - Started git_ingest function
+2025-04-17 03:14:58,312 - INFO - Current repo name in git_ingest is 'https://github.com/Asavari24/BigDataAssignment4Part1'
+2025-04-17 03:15:00,170 - INFO - Finished repo_file_details function
+2025-04-17 03:17:15,373 - INFO - Started git_ingest function
+2025-04-17 03:17:15,373 - INFO - Current repo name in git_ingest is 'https://github.com/Asavari24/BigDataAssignment4Part1'
+2025-04-17 03:18:32,525 - INFO - Started git_ingest function
+2025-04-17 03:18:32,525 - INFO - Current repo name in git_ingest is 'https://github.com/Asavari24/BigDataAssignment4Part1'
+2025-04-17 03:21:45,873 - INFO - Started git_ingest function
+2025-04-17 03:21:45,873 - INFO - Current repo name in git_ingest is 'https://github.com/Asavari24/BigDataAssignment4Part1'
+2025-04-17 03:21:47,632 - INFO - Finished repo_file_details function
+2025-04-17 03:22:15,090 - INFO - Started git_ingest function
+2025-04-17 03:22:15,090 - INFO - Current repo name in git_ingest is 'https://github.com/Asavari24/BigDataAssignment4Part1'
+2025-04-17 03:22:17,382 - INFO - Finished repo_file_details function
