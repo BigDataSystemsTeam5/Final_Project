@@ -9,6 +9,9 @@ It automatically produces:
 - 🧪 Interactive Codelab tutorials via [Google Claat](https://github.com/googlecodelabs/tools)
 - 🔁 CI/CD-ready documentation updates through GitHub Actions
 
+Streamlit access link: http://3.130.104.76:8501/  
+FastAPI access link: http://3.130.104.76:8000/docs
+
 ---
 
 ## 🧭 Architecture Diagram
