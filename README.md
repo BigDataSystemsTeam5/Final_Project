@@ -13,9 +13,9 @@ It automatically produces:
 
 ## 🧭 Architecture Diagram
 
-![AutoDoc AI Architecture](./project_proposal_new/Project_Final.png)
+/Users/nikhilshejwal/Desktop/MCP_GithubServer/diagram/autodoc_ai_architecture_with_deployment.png
 
-*AutoDoc AI – Full Architecture (Based on Sketch)*
+*AutoDoc AI – Full Architecture*
 
 ---
 
