@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+streamlit
+requests
+langchain-openai
+crewai
+gitingest
+re
+os
+snowflake-snowpark-python
+gitingest
+python-dotenv
+gitpython==3.1.38
+PyGithub==1.59.1
