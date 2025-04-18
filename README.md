@@ -33,10 +33,10 @@ It automatically produces:
 |------------------|--------------------------|
 | Frontend         | Streamlit                |
 | Backend          | FastAPI                  |
-| LLM Framework    | LangGraph + GPT-4o mini  |
+| LLM Framework    | CrewAI + GPT-4o mini  |
 | Database         | Snowflake                |
 | Docs Generation  | Google Claat             |
-| Context Retrieval| MCP Servers              |
+| Context Retrieval|CrewAI Code Analyzer Agent |
 
 ---
 
