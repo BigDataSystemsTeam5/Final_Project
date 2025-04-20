@@ -1,0 +1,160 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>AutoDoc AI – Architecture Walkthrough</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="autodoc-ai-architecture"
+                  title="AutoDoc AI – Architecture Walkthrough"
+                  environment="web"
+                  feedback-link="https://your-feedback-link.com">
+    
+      <google-codelab-step label="Introduction" duration="0">
+        <p>Welcome to the AutoDoc AI Codelab! In this tutorial, you&#39;ll learn how AutoDoc AI uses a modular, agent-based approach with Streamlit, FastAPI, and CrewAI to generate and push intelligent documentation for GitHub repositories. You&#39;ll walk through the entire system architecture and understand how each component interacts in real time.</p>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>High-level architecture of AutoDoc AI</li>
+<li>Role of Streamlit and FastAPI in handling user interaction</li>
+<li>How Snowflake and GitHub are used for ingest and tracking</li>
+<li>CrewAI-based agent workflows for code analysis and documentation generation</li>
+<li>Approval and GitHub commit flow</li>
+</ul>
+<h2 is-upgraded>Prerequisites</h2>
+<ul>
+<li>Basic understanding of Python and FastAPI</li>
+<li>Familiarity with GitHub and Markdown</li>
+<li>General awareness of LLMs and agent-based systems</li>
+<li>Optional: AWS EC2, Snowflake basics</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Step 1: User Interaction Layer – Streamlit &#43; FastAPI" duration="0">
+        <ul>
+<li>The user starts by entering a GitHub repo URL in the <strong>Streamlit UI</strong>.</li>
+<li>Streamlit sends this input to <strong>FastAPI</strong>, which acts as a backend controller.</li>
+<li>FastAPI orchestrates the request and forwards it to backend services.</li>
+<li>Once documentation is generated, FastAPI takes <strong>approval input</strong> from the user before pushing changes to GitHub.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Step 2: Backend Services – Snowflake &amp; Git Ingest" duration="0">
+        <ul>
+<li>The <strong>Git Ingest Service</strong> clones/forks the repo and parses its structure.</li>
+<li><strong>Snowflake</strong> is used for: <ul>
+<li>Audit logging</li>
+<li>Repository metadata</li>
+<li>Analytics or pipeline status tracking</li>
+</ul>
+</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Step 3: Agent Workflows – CrewAI System" duration="0">
+        <p>AutoDoc AI uses two core agent crews, managed using <strong>CrewAI</strong>.</p>
+<h2 is-upgraded>Crew I – Code Understanding</h2>
+<ul>
+<li><strong>GitHub Agent</strong> pulls metadata, repo structure, and file info.</li>
+<li><strong>Code Analyzer Agent</strong> reads code, extracts logic, and generates architecture-level summaries.</li>
+</ul>
+<h2 is-upgraded>Crew II – Documentation Generation</h2>
+<ul>
+<li><strong>Final Summary Agent</strong> consolidates findings from Crew I.</li>
+<li><strong>README / Codelab Generator &amp; Validator Agent</strong> creates structured documentation in markdown.</li>
+<li>The documentation is validated before being passed to FastAPI for approval.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Step 4: Approval &#43; GitHub Commit Flow" duration="0">
+        <ul>
+<li>Once the user approves the documentation via Streamlit, FastAPI: <ul>
+<li>Triggers the <strong>GitHub Agent</strong> to fork the original repo.</li>
+<li>Commits the <code>README.md</code> and <code>codelab.md</code> files.</li>
+<li>Creates a <strong>Pull Request</strong> using GitHub REST API and PAT (Personal Access Token).</li>
+</ul>
+</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Step 5: Deployment Architecture" duration="0">
+        <p>The entire system is deployed on <strong>AWS EC2</strong>, and components include:</p>
+<ul>
+<li><strong>Streamlit UI</strong> (Frontend)</li>
+<li><strong>FastAPI</strong> (Backend APIs)</li>
+<li><strong>CrewAI Agents</strong> (Worker engine)</li>
+<li><strong>Snowflake</strong> (Data store)</li>
+<li><strong>GitHub Integration</strong> (PR workflow)</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Evaluation Metrics" duration="0">
+        <table>
+<tr><td colspan="1" rowspan="1"><p>Metric</p>
+</td><td colspan="1" rowspan="1"><p>Description</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Structural Accuracy</p>
+</td><td colspan="1" rowspan="1"><p>Proper formatting of markdown output</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Content Relevance</p>
+</td><td colspan="1" rowspan="1"><p>Output matches actual codebase logic</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Info Retention</p>
+</td><td colspan="1" rowspan="1"><p>No key loss of function/file structure</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Automation</p>
+</td><td colspan="1" rowspan="1"><p>Fully automated GitHub flow from input to PR</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>User Approval</p>
+</td><td colspan="1" rowspan="1"><p>Smooth interface for human-in-the-loop PR control</p>
+</td></tr>
+</table>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Summary" duration="0">
+        <p>AutoDoc AI combines powerful LLM agents with real-time GitHub automation. Its multi-layer architecture and modular agent system built with CrewAI allow developers to automate tedious documentation while retaining accuracy and control.</p>
+<p>✅ You now understand the core working of AutoDoc AI. Next, try submitting your own GitHub repo and watch it generate a high-quality README + Codelab automatically!</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
